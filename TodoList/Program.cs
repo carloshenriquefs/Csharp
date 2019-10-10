@@ -177,6 +177,7 @@ namespace TodoList
                 try
                 {
                     File.WriteAllLines(@path, linha);
+                    tryAgain = "n";
                 }
                 catch (IOException e)
                 {
