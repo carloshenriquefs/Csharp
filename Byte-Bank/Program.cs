@@ -22,6 +22,12 @@ namespace Byte_Bank
             string email = Console.ReadLine();
 
             Cliente cliente1 = new Cliente(nome,cpf,email);
+            //Cliente.nome ="";
+            //Cliente.Cliente(cpf);
+            //Cliente.Cliente(email);
+            // Cliente.Cliente(nome);
+            // Cliente.Cliente(cpf);
+            // Cliente.Cliente(email);
 
             bool senhaOk = false;
 
@@ -68,15 +74,17 @@ namespace Byte_Bank
             }while(!saldoOk);
 
             ContaCorrente contaCorrente = new ContaCorrente(agencia, conta, cliente1);
-            contaCorrente.Saldo = saldo;
+            //contaCorrente.Saldo = saldo;
+            contaCorrente.Deposito(saldo);
+            contaCorrente.Agencia = 123;
             
             //DEPOSITO
 
              Console.WriteLine("DEPOSITO");
              Cliente usuario = contaCorrente.Titular;
-             Console.WriteLine($"Bem-Vindo: {usuario.Nome}");
+             Console.WriteLine($"Bem-Vindo: {usuario.nome}");
              Console.WriteLine($"Agencia: {contaCorrente.Agencia} Conta: {contaCorrente.Numero}");
-             Console.WriteLine($"Saldo: {contaCorrente.Saldo}");
+             Console.WriteLine($"Saldo: {contaCorrente.saldo}");
              Console.WriteLine("Digite o valor do depósito: R$");
              double valor = double.Parse(Console.ReadLine());
              contaCorrente.Deposito(valor);
@@ -86,9 +94,9 @@ namespace Byte_Bank
             //SAQUE
 
              Console.WriteLine("SAQUE");
-             Console.WriteLine($"Bem-vindo {usuario.Nome}");
+             Console.WriteLine($"Bem-vindo {usuario.nome}");
              Console.WriteLine($"Agência {contaCorrente.Agencia}");
-             Console.WriteLine($"Saldo: R$ {contaCorrente.Saldo}");
+             Console.WriteLine($"Saldo: R$ {contaCorrente.saldo}");
              Console.WriteLine("Valor de Saque: R$");
              double saque = double.Parse(Console.ReadLine());
              if(contaCorrente.Saque(valor))
@@ -99,15 +107,17 @@ namespace Byte_Bank
              {
                  Console.WriteLine("Saque invalido!!!");
              }
-             Console.WriteLine($"Saldo Atual: R${contaCorrente.Saldo}");
+             Console.WriteLine($"Saldo Atual: R${contaCorrente.saldo}");
 
              Cliente cliente2 = new Cliente("Carlos","123.659.569.21","CarlosTheman@gmail.com");
+            //  cliente2.Senha = "123";
+            //  cliente2.nome = "teste";
              ContaCorrente contaCorrente2 = new ContaCorrente(123,256,cliente2);
              Console.WriteLine("TRANSFERÊNCIA");
-             Console.WriteLine($"Bem Vindo: {usuario.Nome}");
+             Console.WriteLine($"Bem Vindo: {usuario.nome}");
              Console.WriteLine($"Agencia: {contaCorrente.Agencia}");
-             Console.WriteLine("Saldo Origem: R${contaCorrente.Saldo}");
-             Console.WriteLine($"Saldo Destino: R${contaCorrente2.Saldo}");
+             Console.WriteLine($"Saldo Origem: R${contaCorrente.saldo}");
+             Console.WriteLine($"Saldo Destino: R${contaCorrente2.saldo}");
              Console.WriteLine("Valor à ser transferido: R$");
              valor = double.Parse(Console.ReadLine());
 
