@@ -27,6 +27,7 @@ namespace Banda_de_Músicas
             // Console.WriteLine("Violão: " + violao1.TocarMusica());
             // violao1.TocarAcordes();
 
+            //region MyRegion
             bool querSair = false;
             string[] itensMenuPrincipal = Enum.GetNames(typeof(FormacaoEnum));
             string[] itensMenuCategoria = Enum.GetNames(typeof(CategoriaEnum));
