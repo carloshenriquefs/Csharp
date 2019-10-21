@@ -34,7 +34,7 @@ namespace ReciclagemLixo
             Console.WriteLine("[4] - LATINHA:");
             Console.WriteLine("[5] - PAPELÃO:");
             Console.WriteLine("[6] - POTE DE MANTEIGA:");
-            Console.WriteLine("ESCOLHA UM MATERIAL PARA RECICLAGEM:");
+            Console.Write("ESCOLHA UM MATERIAL PARA RECICLAGEM:");
             int opcao1 = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
@@ -44,8 +44,11 @@ namespace ReciclagemLixo
                 Console.WriteLine("1 - GARRAFA:");
                 GarrafaVidro nome = new GarrafaVidro();
                 nome.VerdVidro();
+                Console.WriteLine();
+                GarrafaVidro adicionar = new GarrafaVidro();
+                adicionar.Adicionar();
+                
                 break;
-
 
                 case 2:
                 Console.WriteLine("2 - GARRAFAPET:");
