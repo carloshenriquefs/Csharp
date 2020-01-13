@@ -10,7 +10,26 @@ namespace HoraInicialHoraFinal
 
         static void Main(string[] args)
         {
-            
+
+            double duracao = 0;
+            Console.WriteLine("[ INFORME ]");
+            Console.WriteLine("Informe a hora inicial: ");
+            double horaInicial = double.Parse(Console.ReadLine());
+            Console.WriteLine("Informe a hora final: ");
+            double horaFinal = double.Parse(Console.ReadLine());
+
+            if(horaFinal > horaInicial)
+            {
+                duracao = horaFinal - horaInicial;
+            }
+            else
+            {
+                duracao = 24 - horaInicial + horaFinal;
+            }
+                Console.WriteLine("Duração do jogo: {0} ",duracao+" horas");
+
+
+
         }
     }
 }
