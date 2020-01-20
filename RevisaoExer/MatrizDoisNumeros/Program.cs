@@ -12,7 +12,7 @@ namespace MatrizDoisNumeros
         static void Main(string[] args)
         {
             
-
+            Console.Write("Informe os números: ");
             string [] vetor = Console.ReadLine().Split(' ');
             int num1 = int.Parse(vetor[0]);
             int num2 = int.Parse(vetor[1]);
@@ -28,6 +28,7 @@ namespace MatrizDoisNumeros
                 }
             }
 
+            Console.WriteLine("Informe um número para procurar: ");
             int numProcurado = int.Parse(Console.ReadLine());
 
             for(int i = 0; i < num1; i++)
@@ -37,6 +38,22 @@ namespace MatrizDoisNumeros
                     if(numeros[i,j] == numProcurado)
                     {
                         Console.WriteLine("Posição: "+i+","+j);
+                        if(j > 0)
+                        {
+                            Console.WriteLine("Esquerda: "+ numeros[i, j -1]);
+                        }
+                        if(i > 0)
+                        {
+                            Console.WriteLine("Em cima: "+numeros[i - 1,j]);
+                        }
+                        if(j < num2 - 1)
+                        {
+                            Console.WriteLine("Direita: "+numeros[i, j+1]);
+                        }
+                        if(i < num1 - 1)
+                        {
+                            Console.WriteLine("Em baixo: "+numeros[i + 1, j]);
+                        }
                     }
                 }
             }
