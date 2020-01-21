@@ -17,6 +17,12 @@ namespace ModosString
             string cortar = frase.Substring(3);
             string cortar1 = frase.Substring(3,5);
 
+            string trocar = frase.Replace("a", "x");
+            string trocar1 = frase.Replace("abc", "xyz");
+
+            bool verificar = String.IsNullOrEmpty(frase);
+            bool verificar1 = String.IsNullOrWhiteSpace(frase);
+
             Console.WriteLine("Original: "+frase);
             Console.WriteLine("Maiusculo: "+maiusculo);
             Console.WriteLine("Minusculo: -"+minusculo+ "-");
@@ -25,6 +31,10 @@ namespace ModosString
             Console.WriteLine("Na posição: "+procura1);
             Console.WriteLine("Substring: (3)"+cortar);
             Console.WriteLine("Substring: (3, 5)"+cortar1);
+            Console.WriteLine("Replace ('a' - 'x')"+trocar);
+            Console.WriteLine("Replace ('abc' - 'xyz'):"+trocar1);
+            Console.WriteLine("Existe True or False: "+ verificar);
+            Console.WriteLine("Existe True ou false: "+verificar1);
         }
     }
 }
