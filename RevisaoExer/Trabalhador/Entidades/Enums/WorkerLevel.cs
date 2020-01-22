@@ -1,3 +1,5 @@
+using System;
+
 namespace Trabalhador.Enum
 {
     enum WorkerLevel : int

@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Trabalhador.Enum;
 namespace Trabalhador
 {
     class Program
@@ -15,7 +15,7 @@ namespace Trabalhador
             Console.Write("Nome: ");
             string nomeFuncionario = Console.ReadLine();
             Console.Write("Nivel (JUNIOR/MIDLEVEL/SENIOR): ");
-            string Nivel = Console.ReadLine();
+            WorkerLevel level = Enum.Parse<WorkerLevel>(Console.ReadLine());
             Console.Write("Base Salarial: ");
             double salario = double.Parse(Console.ReadLine());
 
