@@ -25,6 +25,13 @@ namespace API_PrimeiroArquivo
                     sw.WriteLine("arquivo!");
                 }
             }
+
+            using (StreamWriter sw = File.AppendText(path)){
+                sw.WriteLine(" ");
+                sw.WriteLine("É possivel");
+                sw.WriteLine("adicionar");
+                sw.WriteLine("mais texto");
+            }
         }
     }
 }
