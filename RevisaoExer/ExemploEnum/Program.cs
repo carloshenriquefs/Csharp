@@ -11,6 +11,9 @@ namespace ExemploEnum
 
             var filmePara = new Filme();
             filmePara.Titulo = "Sharknardo 17";
+            filmePara.GeneroFilme = Genero.Comedia;
+
+            Console.WriteLine("{0} é {1}", filmePara.Titulo,filmePara.GeneroFilme);
         }
     }
 }
