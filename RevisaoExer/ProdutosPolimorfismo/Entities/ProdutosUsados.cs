@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace ProdutosPolimorfismo.Entities
 {
@@ -11,7 +12,7 @@ namespace ProdutosPolimorfismo.Entities
 
         }
 
-        public ProdutosUsados(DateTime dataproducao)
+        public ProdutosUsados(string nomeprodutos, double precoprodutos,DateTime dataproducao)
         :base(nomeprodutos, precoprodutos)
         {
             DataProducao = dataproducao;
@@ -19,7 +20,7 @@ namespace ProdutosPolimorfismo.Entities
 
         public override string EtiquetaPreco()
         {
-
+            return NomeProdutos + " (used) $ " + PrecoProdutos.ToString("F2", CultureInfo.InvariantCulture) + "( Data: " + DataProducao.ToString("dd/mm/yy") + " ) ";
         }
     }
 }

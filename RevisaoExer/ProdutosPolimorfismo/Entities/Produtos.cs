@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace ProdutosPolimorfismo
 {
     public class Produtos
@@ -17,7 +19,7 @@ namespace ProdutosPolimorfismo
         }
         public virtual string EtiquetaPreco()
         {
-
+            return NomeProdutos + " $ " + PrecoProdutos.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
