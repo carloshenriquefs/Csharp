@@ -4,3 +4,4 @@ Herança;
 Polimorfismo;
 Classes;
 Entidades;
+Encapsulamento;
